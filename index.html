@@ -1,15 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <meta charset="utf-8">
-  <title>Presentaciones del curso</title>
+  <meta charset="UTF-8">
+  <title>Presentaciones de Probabilidad y Estadística</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #f7f9fb;
+      color: #333;
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #114477;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      margin-top: 2em;
+    }
+
+    .menu a {
+      text-decoration: none;
+      background: #114477;
+      color: white;
+      padding: 1em;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .menu a:hover {
+      background: #176bb2;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 1em;
+      }
+
+      .menu a {
+        font-size: 1em;
+        padding: 0.8em;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Presentaciones de Probabilidad y Estadística</h1>
-  <ul>
-    <li><a href="tecnicas_de_conteo/">Técnicas de conteo</a></li>
-    <!--<li><a href="reglas_de_probabilidad/">Reglas de probabilidad</a></li>
-    <li><a href="distribuciones_discretas/">Distribuciones discretas</a></li> -->>
-  </ul>
+
+  <h1>Presentaciones de<br>Probabilidad y Estadística</h1>
+
+  <div class="menu">
+    <a href="tecnicas_de_conteo/" target="_blank">📊 Técnicas de conteo</a>
+    <!-- Puedes agregar más enlaces aquí -->
+    <!-- <a href="reglas_de_probabilidad/" target="_blank">📐 Reglas de probabilidad</a> -->
+    <!-- <a href="distribuciones_discretas/" target="_blank">🎲 Distribuciones discretas</a> -->
+  </div>
+
 </body>
 </html>
