@@ -8,7 +8,7 @@ Este repositorio contiene cuadernos desarrollados en **Pluto.jl**, ideales para 
 
 Haz clic en el siguiente botón para **abrir una sesión interactiva gratuita** en la nube vía **Binder**:
 
-[![Abrir en Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Santymax98/Probabilidad_y_estadistica/HEAD?urlpath=pluto/)
+[![Abrir en Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Santymax98/Probabilidad_y_estadistica/HEAD)
 
 🔹 **Requiere esperar ~2-5 minutos** la primera vez  
 🔹 Cuando cargue, abre `models_prob.jl` desde el explorador lateral de Pluto
