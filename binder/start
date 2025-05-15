@@ -1,2 +1,2 @@
 #!/bin/bash
-julia -e 'using Pkg; Pkg.activate("."); Pkg.instantiate(); include("Pluto_run.jl")'
+julia Pluto_run.jl
