@@ -1,16 +1,23 @@
-FROM julia:1.10
+FFROM julia:1.10
 
-WORKDIR /home/jovyan
+# Crea un usuario no-root (evita problemas de permisos)
+ARG NB_USER=jovyan
+ARG NB_UID=1000
+RUN useradd -u ${NB_UID} -m ${NB_USER}
+WORKDIR /home/${NB_USER}
+USER ${NB_USER}
 
-# Copia primero los archivos de entorno
-COPY Project.toml Manifest.toml ./
+# Copia los archivos de proyecto con permisos correctos
+COPY --chown=${NB_USER}:${NB_USER} Project.toml Manifest.toml ./
 
-# Instala las dependencias
-RUN julia --project=. -e 'using Pkg; Pkg.instantiate()'
+# Instala dependencias con precompilación
+RUN julia --project=. -e 'using Pkg; \
+    Pkg.instantiate(); \
+    Pkg.precompile()'
 
-# Luego copia el resto del repositorio
-COPY . .
+# Copia el resto con permisos adecuados
+COPY --chown=${NB_USER}:${NB_USER} . .
 
 EXPOSE 1234
 
-CMD ["julia", "Pluto_run.jl"]
+CMD julia Pluto_run.jl
