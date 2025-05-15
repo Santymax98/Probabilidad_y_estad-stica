@@ -1,2 +1,2 @@
 using Pluto
-Pluto.run(launch_browser=false)
+Pluto.run(host="0.0.0.0", port=1234, launch_browser=false)
