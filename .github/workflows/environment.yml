@@ -1,0 +1,10 @@
+name: pluto-environment
+channels:
+  - defaults
+dependencies:
+  - python=3.8
+  - pip
+  - pip:
+    - jupyterlab
+variables:
+  JULIA_NUM_THREADS: 4
