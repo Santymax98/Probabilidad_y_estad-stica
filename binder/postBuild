@@ -1,3 +1,0 @@
-#!/bin/bash
-echo "🔥 Precompilando Pluto..."
-julia --project=. warmup_server.jl
