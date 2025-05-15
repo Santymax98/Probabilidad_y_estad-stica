@@ -1,4 +1,4 @@
-FFROM julia:1.10
+FROM julia:1.10
 
 # Crea un usuario no-root (evita problemas de permisos)
 ARG NB_USER=jovyan
